@@ -13,7 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\Acme.Presentation.Web\Acme.Presentation.Web.csproj" />
+      <ProjectReference Include="..\..\src\Acme.Presentation.Website\Acme.Presentation.Website.csproj" />
     </ItemGroup>
 
 </Project>
