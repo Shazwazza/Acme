@@ -1,7 +1,5 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Presentation.Web", "src\Acme.Presentation.Web\Acme.Presentation.Web.csproj", "{4ABB041F-3EA5-42C9-9C35-AE4446D57658}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BF6AE276-C4FD-4561-A57A-41862C01F417}"
 ProjectSection(SolutionItems) = preProject
 	README.md = README.md
