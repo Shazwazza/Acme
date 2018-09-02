@@ -7,7 +7,7 @@ using NUnit.Framework;
 namespace Acme.IntegrationTests
 {
     [TestFixture]
-    public class ManagementControllerIT
+    public class ControllerIT
     {
         [Test]
         [TestCase(arg: "/Submission/List")]
