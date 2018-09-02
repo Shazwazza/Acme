@@ -5,9 +5,9 @@
 If you experience any problems running this solution, please check the prerequisites.
 
 ### Prerequisites
-#### .NET Core 2.1 SDK (v2.1.300)
+#### .NET Core 2.1.3 SDK (v2.1.401)
 
-Install [.NET Core 2.1 SDK](https://www.microsoft.com/net/download/dotnet-core/sdk-2.1.300)
+Install [.NET Core 2.1.3 SDK](https://www.microsoft.com/net/download/dotnet-core/2.1#sdk-2.1401)
 
 #### Docker
 
