@@ -13,7 +13,7 @@ Install [.NET Core 2.1 SDK](https://www.microsoft.com/net/download/dotnet-core/s
 
 Docker is used to run a local instance of Elasticsearch, Kibana and SQL Server 2017.
 
-1. Install [Docker](./scripts/Docker/Docker_for_Windows_Installer.exe)
+1. Install [Docker](https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe)
 1. Ensure you're running Docker with Linux containers (This is the default behaviour when installing Docker).
 1. Share your `C:/` drive with Docker by ticking the box in your Docker settings, which are accessible when you right click the Docker icon in your system tray.
 
