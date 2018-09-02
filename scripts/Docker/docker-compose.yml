@@ -1,0 +1,53 @@
+version: '2'
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:6.4.0
+    container_name: acme_elasticsearch
+    environment:
+      - cluster.name=docker-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms1024m -Xmx1024m"
+      - xpack.security.enabled=false
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    mem_limit: 2g
+    volumes:
+      - C:/docker/acme/elasticsearch/data:/usr/share/elasticsearch/data
+    ports:
+      - 9200:9200
+    networks:
+      - acme-net  
+  kibana:
+    image: docker.elastic.co/kibana/kibana:6.4.0
+    container_name: acme_kibana
+    environment:
+      ELASTICSEARCH_URL: http://elasticsearch:9200
+      xpack.security.enabled: "false"
+      xpack.monitoring.enabled: "false"
+      xpack.ml.enabled: "false"
+      xpack.graph.enabled: "false"
+      xpack.reporting.enabled: "false"
+    networks:
+      - acme-net 
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch
+  mssql:
+    image: mcmoe/mssqldocker
+    container_name: acme_mssql
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: "<YourStrong!Passw0rd>"
+      MSSQL_DB: Acme
+    volumes:
+      - C:/docker/acme/mssql/data:/usr/share/mssql/data
+    networks:
+      - acme-net 
+    ports:
+      - 1433:1433
+networks:
+  acme-net:
+    driver: bridge

@@ -1,0 +1,64 @@
+﻿@model SubmissionViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>
+    Welcome to the draw!
+</h1>
+<p>
+    Please submit your serial number to enter the draw for a price.<br/>
+    Each serial number can be used twice.
+</p>
+
+
+
+<form class="form-horizontal" method="post">
+    <div class="form-group">
+        <label asp-for="SerialNumberCode" class="col-sm-2 control-label">@Html.DisplayNameFor(x=>x.SerialNumberCode)</label>
+        <div class="col-sm-10">
+            <input asp-for="SerialNumberCode" type="text" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.SerialNumberCode)">
+            @Html.ValidationMessageFor(x=>x.SerialNumberCode)
+        </div>
+        
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="FirstName" class="col-sm-2 control-label">@Html.DisplayNameFor(x=>x.FirstName)</label>
+        <div class="col-sm-10">
+            <input asp-for="FirstName" type="text" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.FirstName)">
+            @Html.ValidationMessageFor(x=>x.FirstName)
+        </div>
+    </div>
+
+    
+    <div class="form-group">
+        <label asp-for="LastName" class="col-sm-2 control-label">@Html.DisplayNameFor(x=>x.LastName)</label>
+        <div class="col-sm-10">
+            <input asp-for="LastName" type="text" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.LastName)">
+            @Html.ValidationMessageFor(x=>x.LastName)
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="Birthday" class="col-sm-2 control-label">@Html.DisplayNameFor(x=>x.Birthday)</label>
+        <div class="col-sm-10">
+            <input asp-for="Birthday" type="date" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.Birthday)">
+            @Html.ValidationMessageFor(x=>x.Birthday)
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label asp-for="EmailAddress" class="col-sm-2 control-label">@Html.DisplayNameFor(x=>x.EmailAddress)</label>
+        <div class="col-sm-10">
+            <input asp-for="EmailAddress" type="email" class="form-control" placeholder="@Html.DisplayNameFor(x=>x.EmailAddress)">
+            @Html.ValidationMessageFor(x=>x.EmailAddress)
+        </div>
+    </div>
+   
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">Submit</button>
+        </div>
+    </div>
+</form>

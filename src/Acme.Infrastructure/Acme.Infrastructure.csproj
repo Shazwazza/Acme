@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="EntityFrameworkCore\Migrations" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Acme.Application\Acme.Application.csproj" />
+      <ProjectReference Include="..\Acme.Domain\Acme.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="FluentValidation, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7de548da2fbae0f0">
+        <HintPath>C:\Users\Berg\.nuget\packages\fluentvalidation\8.0.0\lib\netstandard2.0\FluentValidation.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+</Project>
